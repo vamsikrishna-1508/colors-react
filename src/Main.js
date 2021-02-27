@@ -36,6 +36,8 @@ const ColorCard = ({ color }) => {
     color: color === "black" ? "#fff" : "black",
     height: "20vh",
     border: "1px solid #000",
+    justifyContent: "center",
+    alignItems: "center",
     cursor: "pointer"
   };
 
