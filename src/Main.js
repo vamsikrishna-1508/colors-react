@@ -33,7 +33,7 @@ const ColorCard = ({ color }) => {
     display: "flex",
     margin: "22px",
     backgroundColor: data[color],
-    color: color === "black" ? "#fff" : "black",
+    color: color === "Black" ? "#ffffff" : "Bslack",
     height: "20vh",
     border: "1px solid #000",
     justifyContent: "center",
