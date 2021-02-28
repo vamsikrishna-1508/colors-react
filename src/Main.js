@@ -17,8 +17,27 @@ const Main = () => {
 
   return (
     <div>
-      <input className="form-control m-2 w-50 d-flex" onChange={handleChange} />
-      <div className="row">
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "column wrap",
+          alignItems: "center"
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "Bookman, URW Bookman L, serif",
+            fontWeight: "bold"
+          }}
+        >
+          Select Your Color
+        </h1>
+        <input
+          className="form-control m-2 w-50 d-flex"
+          onChange={handleChange}
+        />
+      </div>
+      <div className="row" style={{ paddingLeft: "80px" }}>
         {colors.map((color, idx) => (
           <ColorCard key={idx} color={color} />
         ))}
@@ -29,15 +48,21 @@ const Main = () => {
 
 const ColorCard = ({ color }) => {
   const style = {
+    fontFamily: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif",
+    fontWeight: "bold",
+    fontSize: "large",
     width: "12rem",
     display: "flex",
     margin: "22px",
+    paddingTop: "40px",
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.8)",
     backgroundColor: data[color],
     color: color === "Black" ? "#ffffff" : "Bslack",
-    height: "20vh",
-    border: "1px solid #000",
+    height: "25vh",
+    border: "1px #000",
     justifyContent: "center",
     alignItems: "center",
+    borderRadius: "10px",
     cursor: "pointer"
   };
 
@@ -46,11 +71,11 @@ const ColorCard = ({ color }) => {
   };
 
   return (
-    <>
+    <div>
       <Card style={style} onClick={handleClick}>
         <Card.Body>{color}</Card.Body>
       </Card>
-    </>
+    </div>
   );
 };
 
